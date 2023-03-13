@@ -16,12 +16,12 @@ import { ReactComponent as LogoFooter } from "./image/logo-footer.svg";
 import { debounce } from "lodash";
 function App() {
   const handleChange = debounce((e) => {
-    console.log(e.target.value);
-    clearIt();
     mark(e.target.value);
-  }, 1000);
+    e.preventDefault();
+  }, 500);
+
   function mark(it) {
-    //clearIt();
+    clearIt();
     if (it.length > 2) {
       let c = new RegExp(it, "ig");
 
@@ -32,10 +32,8 @@ function App() {
   }
 
   function clearIt() {
-    let b = new RegExp("mark>", "ig");
-    document.getElementById("main").innerHTML = document
-      .getElementById("main")
-      .innerHTML.replace(b, "wbr>");
+    let b = new RegExp("mark>", "ig")
+    document.getElementById("main").innerHTML = document.getElementById("main").innerHTML.replace(b, "wbr>")
   }
   return (
     <div className="App w-full" id="main">
@@ -55,10 +53,11 @@ function App() {
             <input
               type="search"
               onChange={handleChange}
+              onBlur={() => clearIt()}
               id="default-search"
               className="w-28 focus:outline-none h-6 pl-10 text-sm text-[#686868] border-b opacity-50 bg-[url('./image/magnifying-glass.svg')] bg-no-repeat bg-transparent"
               placeholder="Search"
-              required
+
             ></input>
             <button
               className="h-12 w-24 px-6 font-semibold text-sm rounded-2xl drop-shadow-lg bg-[#217BF4] text-white"
