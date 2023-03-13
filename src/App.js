@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useState, useEffect } from 'react';
 import { ReactComponent as Boyblue } from './image/boy-blue.svg';
 import { ReactComponent as BoyYellow } from './image/boy-yellow.svg';
 import { ReactComponent as Girl } from './image/girl.svg';
@@ -10,7 +11,27 @@ import { ReactComponent as Lan } from './image/lan-cable.svg';
 import { ReactComponent as People } from './image/people.svg';
 import { ReactComponent as Trophy } from './image/trophy.svg';
 import { ReactComponent as RedEllipse } from './image/red-ellipse.svg';
+import { debounce } from "lodash";
 function App() {
+  const [key, setKey] = useState('');
+  const handleChange = debounce((e) => {
+    setKey(e.target.value);
+    console.log(e.target.value)
+    var pattern = e.target.value.toLowerCase();
+    var targetId = "";
+
+    var divs = document.getElementsByTagName("body");
+    for (var i = 0; i < divs.length; i++) {
+      var para = divs[i].getElementsByTagName("p");
+      var index = para[0].innerText.toLowerCase().indexOf(pattern);
+      if (index !== -1) {
+        targetId = divs[i].parentNode.id;
+        console.log(targetId)
+        document.getElementById(targetId).scrollIntoView();
+        break;
+      }
+    }
+  }, 1000);
   return (
     <div className="App w-full'">
       <div className="flex flex-col w-full h-auto bg-gradient-to-r from-white to-blue-100 ">
@@ -27,7 +48,7 @@ function App() {
           <div className='flex-1 flex-row shrink-0 text-center space-x-2'>
 
             {/* <input className="w-28 h-8 text-[#686868] font-normal text-sm" placeholder='search'></input> */}
-            <input type="search" id="default-search" className="w-28 h-4 p-4 pl-10 text-sm text-[#686868] border-b opacity-50 bg-[url('./image/magnifying-glass.svg')] bg-no-repeat bg-transparent" placeholder="Search Here..." required></input>
+            <input type="search" onChange={handleChange} id="default-search" className="w-28 h-4 p-4 pl-10 text-sm text-[#686868] border-b opacity-50 bg-[url('./image/magnifying-glass.svg')] bg-no-repeat bg-transparent" placeholder="Search Here..." required></input>
             <button className="h-12 w-24 px-6 font-semibold text-sm rounded-2xl drop-shadow-lg bg-[#217BF4] text-white" type="button">
               Log in
             </button>
@@ -65,7 +86,7 @@ function App() {
       </div>
       <div className="hero flex flex-col w-full bg-gradient-to-r bg-white my-28">
         <div className="flex flex-row space-x-16 max-xl:flex-col w-full px-32 h-auto mx-auto md-xl:space-x-16">
-          <div className="w-2/4 max-xl:w-full py-32 flex flex-col top-52">
+          <div id="what-nb" className="w-2/4 max-xl:w-full py-32 flex flex-col top-52">
             <p className="text-[#217BF4] font-normal text-sm text-start">Whats netbooks?</p>
             <div className='font-sans normal font-bold text-5xl leading-10 text-[#0A093D] mt-5 text-start'>Why Join to Notebook Social Network?</div>
             <div className='font-sans normal font-normal text-lg leading-7 text-[#656464] mt-5 text-start'>Recent surveys have indicated that small businesses recognise the need they have to connect with consumer.</div>
