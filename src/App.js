@@ -7,10 +7,12 @@ import { ReactComponent as ChatYellow } from './image/chat-yellow.svg';
 import { ReactComponent as Coding } from './image/coding.svg';
 import { ReactComponent as Discussion } from './image/discussion.svg';
 import { ReactComponent as Lan } from './image/lan-cable.svg';
-
+import { ReactComponent as People } from './image/people.svg';
+import { ReactComponent as Trophy } from './image/trophy.svg';
+import { ReactComponent as RedEllipse } from './image/red-ellipse.svg';
 function App() {
   return (
-    <div className="App w-full rela'">
+    <div className="App w-full'">
       <div className="flex flex-col w-full h-auto bg-gradient-to-r from-white to-blue-100 ">
         <div className="w-full flex flex-row h-16 top-5 px-10 py-10">
           <div className='flex flex-row space-x-24'>
@@ -60,9 +62,8 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="w-full h-72"></div>
       </div>
-      <div className="hero flex flex-col w-full bg-gradient-to-r bg-white mt-28">
+      <div className="hero flex flex-col w-full bg-gradient-to-r bg-white my-28">
         <div className="flex flex-row space-x-16 max-xl:flex-col w-full px-32 h-auto mx-auto md-xl:space-x-16">
           <div className="w-2/4 max-xl:w-full py-32 flex flex-col top-52">
             <p className="text-[#217BF4] font-normal text-sm text-start">Whats netbooks?</p>
@@ -92,66 +93,93 @@ function App() {
 
           </div>
         </div>
-        <div className="flex flex-row ml-10 mr-10">
-          <figure class="bg-slate-100 rounded-xl p-8">
-            <div class="pt-6 space-y-4">
-              <blockquote>
-                <p class="text-lg font-medium">
-                  “Tailwind CSS is the only framework that I've seen scale
-                  on large teams. It’s easy to customize, adapts to any design,
-                  and the build size is tiny.”
-                </p>
-              </blockquote>
-              <figcaption>
-                <div>
-                  Sarah Dayan
+        <div class="grid grid-rows-3 grid-flow-col gap-4 px-32">
+          <div class="row-start-1 row-span-3 col-span-1">
+            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <div class="p-5 space-y-5">
+                <div className="flex flex-row">
+                  <svg aria-hidden="true" class="w-10 h-10 text-[#217BF4] dark:text-gray-500 border-solid border-[#217BF4]" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Fifth star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                  <a href="#">
+                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">4.8 Rating</h5>
+                  </a>
                 </div>
-                <div>
-                  Staff Engineer, Algolia
-                </div>
-              </figcaption>
-            </div>
-          </figure>
-          <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
-            <div class="pt-6 space-y-4">
-              <blockquote>
-                <p class="text-lg font-medium">
-                  “Tailwind CSS is the only framework that I've seen scale
-                  on large teams. It’s easy to customize, adapts to any design,
-                  and the build size is tiny.”
-                </p>
-              </blockquote>
-              <figcaption>
-                <div>
-                  Sarah Dayan
-                </div>
-                <div>
-                  Staff Engineer, Algolia
-                </div>
-              </figcaption>
-            </div>
-          </figure>
-          <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
-            <div class="pt-6 space-y-4">
-              <blockquote>
-                <p class="text-lg font-medium">
-                  “Tailwind CSS is the only framework that I've seen scale
-                  on large teams. It’s easy to customize, adapts to any design,
-                  and the build size is tiny.”
-                </p>
-              </blockquote>
-              <figcaption>
-                <div>
-                  Sarah Dayan
-                </div>
-                <div>
-                  Staff Engineer, Algolia
-                </div>
-              </figcaption>
-            </div>
-          </figure>
+                <div className="flex flex-row space-x-1">
+                  <People />
+                  <div className="inline-flex items-center text-base font-semibold text-[#217BF4] dark:text-white">
+                    +836K
+                  </div>
+                  <div className="inline-flex items-center text-base">
+                    Members
+                  </div>
 
+                </div>
+                <div className="flex">
+                  More than 2 billion we people over countries use socibooks we to stay in touch with friends.
+                </div>
+                <div class="flex items-center justify-between">
+                  <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-[#217BF4]">
+                    Join Our Community
+                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row-start-1 row-span-3 col-span-1">
+            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <div class="p-5 space-y-5">
+                <div className="flex flex-row">
+                  <Trophy />
+                  <div className="inline-flex items-center text-base">
+                    Awwwards
+                  </div>
+                </div>
+                <div className="flex flex-row space-x-1">
+                  <RedEllipse />
+                  <div className="inline-flex items-center text-base">
+                    Best of
+                  </div>
+                  <div className="inline-flex items-center text-base font-semibold text-[#217BF4] dark:text-white">
+                    2021
+                  </div>
+                  <div className="inline-flex items-center text-base">
+                    on Github
+                  </div>
+
+                </div>
+                <div className="flex">
+                  More than 2 billion we people over countries use socibooks we to stay in touch with friends.
+                </div>
+                <div class="flex items-center justify-between">
+                  <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-[#4A4A56]">
+                    Go to Awards
+                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row-start-1 row-span-3 col-span-2">
+            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <div class="p-5 space-y-5 text-start">
+                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-[#217BF4]">
+                  Our Achievement
+                </a>
+                <div className='font-sans normal font-bold text-4xl leading-10 text-[#0A093D] mt-5 text-start'>Your Solutions For Community!</div>
+                <div className='font-sans normal font-normal text-lg leading-7 text-[#656464] mt-5 text-start'>More than 2 billion people in over countries use socibook to stay in touch with friends & family.</div>
+                <div class="flex items-center justify-between">
+                  <button class="inline-flex h-14 drop-shadow-md items-center px-3 py-2 text-sm rounded-xl font-medium text-center text-white bg-[#217BF4]">
+                    Join Our Community
+                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div className="hero flex flex-col w-full h-96 bg-[#2B2B39]">
+
       </div>
     </div>
   );
