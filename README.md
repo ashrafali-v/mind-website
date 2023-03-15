@@ -43,6 +43,18 @@ I have chosen to create a search functionality for the page,
 
 I believe it is one of the most helping functionality when ever we visit web pages with multiple folds down to scroll.
 
+How I solve the search?
+
+1.I have created a object array for all the data inside the website.
+2.The object conatins an id and a value, id used as element id and value is the string itself inside the element
+3.When ever a search enter, get the key and pass it inside the loop of the array.
+4.used javascript includes method on each string inside the loop to check the key is present or not.
+5.To make sure the search is case in sensitive, make both string and key to lower case by using toLowerCase() method of Javascript.
+6.Once a mach found push the id in to a temp array.
+7.loop thorugh temp array and used document.getElementById().style property of Javascript to apply a background color(yellow).
+8.Then scroll the page to the first match in the page by using javascript scrollIntoView() method
+9.Done
+
 ### `To run the project`
 
 1.npm i
