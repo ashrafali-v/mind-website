@@ -8,13 +8,13 @@ describe("App component", () => {
     const linkElement = screen.getByText(/Whats netbooks?/i);
     expect(linkElement).toBeInTheDocument();
   });
-  it("has a search box", () => {
+  it("has the search box available", () => {
     const handleSubmit = jest.fn((value) => { });
     render(<Search handleSubmit={handleSubmit} />);
     const searchElement = screen.getByPlaceholderText("Search");
     expect(searchElement).toBeInTheDocument();
   });
-  it("updates on change", () => {
+  it("has search box calling with expected key", () => {
     const handleSubmit = jest.fn((value) => { });
     render(<Search handleSubmit={handleSubmit} />);
     const searchElement = screen.getByPlaceholderText("Search");

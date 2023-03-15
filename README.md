@@ -42,3 +42,14 @@ Deployed in AWS and code is accessing from github repository
 I have chosen to create a search functionality for the page,
 
 I believe it is one of the most helping functionality when ever we visit web pages with multiple folds down to scroll.
+
+### `To run the project`
+
+1.npm i
+2.npm run start
+
+### `To test the project`
+
+1.npm run test
+
+Test is written by using jest with react testing library
