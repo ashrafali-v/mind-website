@@ -228,7 +228,7 @@ function App() {
             </div>
             <div class="mt-auto">
               <div class="pt-6">
-                <Search handleSubmit={handleSearch} />
+                <Search handleSubmit={handleSearch} handleClear={clearHighlight} />
                 <button
                   className="login-button h-12 w-24 px-6 font-semibold text-sm rounded-2xl drop-shadow-lg bg-[#217BF4] text-white"
                   type="button"
