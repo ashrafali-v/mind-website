@@ -35,9 +35,9 @@ react-svg - To create svg's as components , so that it cxan use more handy
 
 ### `Deployment`
 
-Deployed in AWS and code is accessing from github repository
+Deployed in AWS amplify and code is accessing from github master repository for the continues integration and continues deployment
 
-### `Why search`
+### `Why search?`
 
 I have chosen to create a search functionality for the page,
 
@@ -64,4 +64,6 @@ How I solved the search?
 
 1.npm run test
 
-Test is written by using jest with react testing library
+- Test is written by using jest with react testing library,
+- Have wrote one test case to check the page rendered correctly.
+- Have wrote another test case for the search is calling with expected keyword
