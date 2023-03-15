@@ -43,7 +43,7 @@ I have chosen to create a search functionality for the page,
 
 I believe it is one of the most helping functionality when ever we visit web pages with multiple folds down to scroll.
 
-How I solve the search?
+How I solved the search?
 
 - I have created a object array for all the data inside the website.
 - The object conatins an id and a value, id used as element id and value is the string itself inside the element
