@@ -31,8 +31,14 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `Plugins used`
 
-Lodash - To use debounce time for search (Not necessary can do by setTimeout but the re rendering will cost performance)
+react-svg - To create svg's as components , so that it cxan use more handy
 
 ### `Deployment`
 
 Deployed in AWS and code is accessing from github repository
+
+### `Why search`
+
+I have chosen to create a search functionality for the page,
+
+I believe it is one of the most helping functionality when ever we visit web pages with multiple folds down to scroll.
