@@ -13,6 +13,7 @@ import { ReactComponent as Trophy } from "./image/trophy.svg";
 import { ReactComponent as RedEllipse } from "./image/red-ellipse.svg";
 import { ReactComponent as EmailForm } from "./image/email-form.svg";
 import { ReactComponent as FavIcon } from "./image/fav-icon.svg";
+import { ReactComponent as Star } from "./image/star.svg";
 import Search from "./components/search";
 import Footer from "./components/footer";
 function App() {
@@ -120,7 +121,7 @@ function App() {
   return (
     <div className="App w-full" id="main">
       <div className="flex flex-col w-full h-auto bg-gradient-to-r from-white to-blue-100 ">
-        <div className="flex md:hidden">
+        <div className="flex min-[860px]:hidden">
           <button
             className="navbar-burger items-center text-blue-600 p-3"
             onClick={handleOpen}
@@ -135,7 +136,7 @@ function App() {
             </svg>
           </button>
         </div>
-        <div className="hidden w-full md:flex flex-row h-16 top-5 px-10 2xl:px-5 py-10">
+        <div className="hidden w-full min-[860px]:flex flex-row h-16 top-5 px-10 2xl:px-5 py-10">
           <div className="flex flex-row lg:space-x-20 md:space-x-10 sm:space-x-5 basis-1/2">
             <div className="flex flex-row">
               <Logo />
@@ -241,7 +242,7 @@ function App() {
         </div>
         <div className="w-full h-0 opacity-10 border border-solid my-3 border-[#217BF4]"></div>
         <div className="flex flex-row max-lg:flex-col w-full lg:px-20 md:px-10 sm:px-5 min-[320px]:px-5 h-auto mx-auto md-xl:space-x-16">
-          <div className="w-2/4 max-xl:w-full max-lg:py-10 lg:py-32 flex flex-col top-52">
+          <div className="w-2/4 max-lg:w-full max-lg:py-10 lg:py-32 flex flex-col top-52">
             <button
               id="mf-btn-netbbok"
               className="h-9 w-44 font-normal text-sm rounded-md border bg-[#eaeff8] text-[#217BF4]"
@@ -279,11 +280,11 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="w-3/4 max-xl:w-full flex-col top-40 bg-[url('./image/vector-triangle.svg')] bg-no-repeat bg-center">
+          <div className="w-3/4 max-lg:w-full flex-col top-40 bg-[url('./image/vector-triangle.svg')] bg-no-repeat bg-center">
             <div className="flex flex-row">
-              <Girl className="ml-auto mr-auto max-md:-ml-20 max-md:-mt-7" />
+              <Girl className="ml-auto mr-auto max-md:-ml-12 max-md:-mt-11" />
               <ChatYellow className="sm:mt-16 max-sm:mt-12 ml-auto mr-auto" />
-              <BoyYellow className="sm:mt-10 lg:mt-10 ml-auto mr-auto max-xl:mr-20 lg:mr-20 max-md:mr-0 max-[500px]:-mr-5" />
+              <BoyYellow className="md:mt-10 ml-auto mr-auto max-xl:mr-20 lg:mr-20 max-md:mr-0 max-[500px]:-mr-5 max-sm:-mt-3" />
             </div>
             <div className="flex flex-row ">
               <Boyblue className="ml-auto mr-auto" />
@@ -380,18 +381,9 @@ function App() {
             <div class="w-full text-start bg-white border border-gray-200 rounded-lg shadow">
               <div class="p-5 space-y-5">
                 <div className="flex flex-row">
-                  <svg
-                    aria-hidden="true"
-                    class="w-10 h-10 text-[#217BF4] border-solid border-[#217BF4]"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Fifth star</title>
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                  </svg>
+                  <Star />
                   <a href="#" id="tf-init-title">
-                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 ml-2 mt-2">
+                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 ml-2">
                       4.8 Rating
                     </h5>
                   </a>
@@ -445,14 +437,8 @@ function App() {
                 </div>
                 <div id="tfs-title" className="flex flex-row space-x-1">
                   <RedEllipse />
-                  <div className="inline-flex items-center text-base">
-                    Best of
-                  </div>
-                  <div className="inline-flex items-center text-base font-semibold text-[#217BF4]">
-                    2021
-                  </div>
-                  <div className="inline-flex items-center text-base">
-                    on Github
+                  <div className="items-center text-base">
+                    Best of <span className="inline-flex items-center text-base font-semibold text-[#217BF4]">2021</span> on Github
                   </div>
                 </div>
                 <div id="tfs-desc" className="flex">
